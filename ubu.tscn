@@ -1,0 +1,334 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Target.tscn" type="PackedScene" id=2]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 150, 150 )
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( 75, 0, 75, -75, 0, 75, 75, 0, -75, -75, 0, 75, -75, 0, -75, 75, 0, -75 )
+
+[sub_resource type="PlaneMesh" id=3]
+size = Vector2( 150, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=4]
+data = PoolVector3Array( 75, 0, 50, -75, 0, 50, 75, 0, -50, -75, 0, 50, -75, 0, -50, 75, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=5]
+size = Vector2( 150, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=6]
+data = PoolVector3Array( 75, 0, 50, -75, 0, 50, 75, 0, -50, -75, 0, 50, -75, 0, -50, 75, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=7]
+size = Vector2( 150, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=8]
+data = PoolVector3Array( 75, 0, 50, -75, 0, 50, 75, 0, -50, -75, 0, 50, -75, 0, -50, 75, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=9]
+size = Vector2( 150, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=10]
+data = PoolVector3Array( 75, 0, 50, -75, 0, 50, 75, 0, -50, -75, 0, 50, -75, 0, -50, 75, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=11]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=12]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=13]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=14]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=15]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=16]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=17]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=18]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=19]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=20]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=21]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=22]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=23]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=24]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="PlaneMesh" id=25]
+size = Vector2( 40, 100 )
+
+[sub_resource type="ConcavePolygonShape" id=26]
+data = PoolVector3Array( 20, 0, 50, -20, 0, 50, 20, 0, -50, -20, 0, 50, -20, 0, -50, 20, 0, -50 )
+
+[sub_resource type="Environment" id=27]
+ambient_light_color = Color( 0.513726, 0.219608, 0.572549, 1 )
+fog_enabled = true
+fog_color = Color( 0.0156863, 0.0313726, 0.0509804, 1 )
+fog_sun_color = Color( 0.301961, 0.298039, 0.286275, 1 )
+ssao_enabled = true
+ssao_color = Color( 0.721569, 0.666667, 0.666667, 1 )
+ssao_edge_sharpness = 14.06
+
+[node name="ubu" type="Spatial"]
+
+[node name="My room" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+editor/display_folded = true
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 50, -75 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance2/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 0.999896, -0.0144192, -6.30283e-10, 0, -4.37114e-08, 1, -0.0144192, -0.999896, -4.37069e-08, 0, 50, 75 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance3/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( -4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, 1, 1, 4.37114e-08, -4.37114e-08, -75, 49.5834, 0 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance4/StaticBody"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 75, 50, 0 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance5/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 55, 50, 0 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance6/StaticBody"]
+shape = SubResource( 12 )
+
+[node name="MeshInstance7" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 55, 50, 0 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance7/StaticBody"]
+shape = SubResource( 14 )
+
+[node name="MeshInstance8" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 50, -20 )
+mesh = SubResource( 15 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance8/StaticBody"]
+shape = SubResource( 16 )
+
+[node name="MeshInstance9" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( -4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 50, -20 )
+mesh = SubResource( 17 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance9/StaticBody"]
+shape = SubResource( 18 )
+
+[node name="MeshInstance10" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -55, 50, 0 )
+mesh = SubResource( 19 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance10/StaticBody"]
+shape = SubResource( 20 )
+
+[node name="MeshInstance11" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -55, 50, 0 )
+mesh = SubResource( 21 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance11/StaticBody"]
+shape = SubResource( 22 )
+
+[node name="MeshInstance12" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 50, 55 )
+mesh = SubResource( 23 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance12/StaticBody"]
+shape = SubResource( 24 )
+
+[node name="MeshInstance13" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 50, 55 )
+mesh = SubResource( 25 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance13/StaticBody"]
+shape = SubResource( 26 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.57239, -2.72599, 8.90496 )
+
+[node name="targets" type="Spatial" parent="."]
+
+[node name="Target_Whole2" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 10, 74.5 )
+
+[node name="Target_Whole42" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 10, 74.5 )
+
+[node name="Target_Whole4" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 10, 74.5 )
+
+[node name="Target_Whole27" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 74.5, 40, 50 )
+
+[node name="Target_Whole28" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 74.5, 40, 30 )
+
+[node name="Target_Whole29" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 74.5, 40, 10 )
+
+[node name="Target_Whole9" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 20, 67 )
+
+[node name="Target_Whole10" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 25, 55 )
+
+[node name="Target_Whole11" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 20, 43 )
+
+[node name="Target_Whole12" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -74.5, 27, 35 )
+
+[node name="Target_Whole13" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -74.5, 27, 50 )
+
+[node name="Target_Whole14" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -74.5, 27, 20 )
+
+[node name="Target_Whole31" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 10, 55 )
+
+[node name="Target_Whole32" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 20, 55 )
+
+[node name="Target_Whole25" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -74.5, 17.1981, -40 )
+
+[node name="Target_Whole35" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 10, -20 )
+
+[node name="Target_Whole37" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 74.5, 10, -30 )
+
+[node name="Target_Whole38" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 74.5, 10, -45 )
+
+[node name="Target_Whole33" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 30, -20 )
+
+[node name="Target_Whole34" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 20, -20 )
+
+[node name="Target_Whole17" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -55, 35, 1 )
+
+[node name="Target_Whole18" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -55, 45, 1 )
+
+[node name="Target_Whole19" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -55, 25, 1 )
+
+[node name="Target_Whole20" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -49.965, 30, -75 )
+
+[node name="Target_Whole21" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -40, 30, -75 )
+
+[node name="Target_Whole22" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30, 30, -75 )
+
+[node name="Target_Whole23" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -20, 30, -75 )
+
+[node name="Target_Whole24" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 30, -0.5 )
+
+[node name="Target_Whole40" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 30, -0.5 )
+
+[node name="Target_Whole41" parent="targets" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 15, -0.5 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 27 )
